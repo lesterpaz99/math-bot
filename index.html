@@ -6,8 +6,51 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>MathBot</title>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
+		<div class="wrapper">
+			<header class="header">
+				<img class="main-logo" src="./assets/logo.svg" alt="Math Logo" />
+			</header>
+			<main class="main-section">
+				<div class="wrapper">
+					<div class="content">
+						<div class="greetings__container">
+							<p class="greetings">
+								<img
+									class="greetings__icon"
+									src="./assets/waving_hand1.svg"
+									alt="Waving hand"
+								/>
+								Hi, I'm <span>MathBot</span>.
+							</p>
+							<p class="greetings__description">
+								and I'll help you <span>with math </span>
+								<img class="bot-icon" src="./assets/bot.svg" alt="Bot Icon" />
+							</p>
+						</div>
+						<!-- NAV SECTION -->
+						<nav class="nav">
+							<p class="nav__question">what are we going to calculate today?</p>
+							<ul>
+								<li><a href="#geometry">Geometry</a></li>
+								<li><a href="#discounts">Discounts</a></li>
+								<li><a href="#statistics">Statistics</a></li>
+								<li><a href="#analysis">Analysis</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</main>
+			<!-- GEOMETRY SECTION -->
+			<section></section>
+		</div>
 		<script src="./app.js"></script>
 	</body>
 </html>

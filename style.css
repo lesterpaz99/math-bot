@@ -1,0 +1,108 @@
+/* RESET STYLES */
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+img {
+	max-inline-size: 100%;
+	block-size: auto;
+}
+a {
+	text-decoration: none;
+	color: initial;
+}
+li {
+	list-style: none;
+}
+
+:root {
+	font-size: 62.5%;
+
+	/* COLORS */
+	--main-color: #00f2b5;
+	--main-font-color: rgba(0, 0, 0, 0.9);
+	--secondary-color: #e4d7ff;
+	--secondary-font-color: #aa96d5;
+	--third-color: #fedfaf;
+	--third-font-color: #f0935d;
+
+	/* FONTS */
+	--main-font: 'Inter', sans-serif;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: var(--main-font);
+	color: var(--main-font-color);
+	font-weight: 300;
+}
+
+.wrapper {
+	padding: 1rem;
+}
+
+.header {
+	block-size: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 1rem;
+	border-radius: 8px;
+	border-block-end: 1px solid rgba(0, 0, 0, 0.1);
+	margin-block-end: 5rem;
+}
+
+.main-logo {
+	inline-size: 4rem;
+}
+
+.greetings__container {
+	margin-block-end: 5rem;
+	letter-spacing: 0.5px;
+	word-spacing: 1px;
+	line-height: 2.2rem;
+}
+
+.greetings span,
+.greetings__description span {
+	font-weight: 600;
+}
+
+.greetings__icon,
+.bot-icon {
+	block-size: 2rem;
+	vertical-align: middle;
+}
+
+.greetings__icon {
+	block-size: 2rem;
+}
+
+.bot-icon {
+	block-size: 4rem;
+	position: relative;
+	inset-block-end: 6px;
+}
+
+.nav__question {
+	text-align: center;
+	margin-block-end: 1rem;
+	font-size: 1.5rem;
+}
+
+.nav ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 4rem 4rem;
+	gap: 1rem;
+}
+
+.nav ul li {
+	box-shadow: 0 0 8px 0 rgb(0, 0, 0, 12%);
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
