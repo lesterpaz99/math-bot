@@ -21,12 +21,13 @@ li {
 	font-size: 62.5%;
 
 	/* COLORS */
-	--main-color: #00f2b5;
+	--primary-color: #00f2b5;
 	--main-font-color: rgba(0, 0, 0, 0.9);
+	--font-color2: white;
 	--secondary-color: #e4d7ff;
-	--secondary-font-color: #aa96d5;
+	--font-color3: #9792a3;
 	--third-color: #fedfaf;
-	--third-font-color: #f0935d;
+	--font-color4: #f0935d;
 
 	/* FONTS */
 	--main-font: 'Inter', sans-serif;
@@ -52,6 +53,10 @@ body {
 	border-radius: 8px;
 	border-block-end: 1px solid rgba(0, 0, 0, 0.1);
 	margin-block-end: 5rem;
+}
+
+.main-section {
+	margin-block-end: 2rem;
 }
 
 .main-logo {
@@ -102,7 +107,119 @@ body {
 .nav ul li {
 	box-shadow: 0 0 8px 0 rgb(0, 0, 0, 12%);
 	border-radius: 8px;
+}
+
+.nav ul li a {
+	block-size: 100%;
+	inline-size: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.section__title {
+	font-size: 2.6rem;
+	font-weight: 600;
+	margin: 1rem;
+}
+
+.card {
+	border-radius: 24px;
+	padding: 1rem;
+	font-size: 1.5rem;
+	color: var(--font-color2);
+	text-shadow: 0 0 30px black;
+}
+
+.card__title {
+	margin-block-end: 1rem;
+	font-weight: 600;
+	font-size: 1.8rem;
+}
+
+.card__title img {
+	width: 3rem;
+	margin: 0.5rem;
+	vertical-align: middle;
+}
+
+.inputs {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 1rem;
+	margin-block-end: 1rem;
+}
+
+.card input,
+.card select {
+	padding: 1rem;
+	border: none;
+	border-radius: 8px;
+	margin: 1rem 0 1rem 0;
+	color: var(--font-color2);
+}
+
+.card input:focus,
+.card select:focus {
+	outline: 2px solid var(--font-color2);
+	outline-style: auto;
+}
+
+.card input {
+	background-color: rgba(255 255 255 / 20%);
+}
+
+.card select {
+	background: transparent;
+}
+
+.card select * {
+	color: black;
+}
+
+.card button {
+	padding: 1rem;
+	border: none;
+	border-radius: 12px;
+	font-weight: 600;
+}
+
+.card button:focus {
+	outline: 2px solid var(--primary-color);
+	outline-style: auto;
+}
+
+.card button:active {
+	transform: scale(0.95);
+}
+
+.buttons {
+	display: flex;
+	justify-content: flex-start;
+	gap: 1rem;
+	margin-block-end: 1rem;
+}
+
+.result {
+	inline-size: 100%;
+	block-size: 4rem;
+	line-height: 4rem;
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 600;
+	border-block-end: 2px solid white;
+	border-radius: 1.6rem;
+}
+
+.square {
+	background-color: var(--primary-color);
+}
+
+.square select {
+	inline-size: 6rem;
+}
+
+.square button {
+	background-color: var(--font-color2);
+	color: var(--primary-color);
 }

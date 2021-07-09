@@ -49,7 +49,42 @@
 				</div>
 			</main>
 			<!-- GEOMETRY SECTION -->
-			<section></section>
+			<section id="geometry">
+				<h2 class="section__title">Geometry</h2>
+				<div class="card square">
+					<div class="wrapper">
+						<h3 class="card__title square__title">
+							<img src="./assets/square.svg" alt="Square icon" /> Square
+						</h3>
+						<form>
+							<label for="inputSquare">
+								How long is each side of your square?
+								<div class="inputs square__inputs">
+									<input type="number" id="inputSquare" />
+									<select name="unit" id="unit">
+										<option value="cm">cm</option>
+										<option value="mm">mm</option>
+										<option value="km">km</option>
+									</select>
+								</div>
+							</label>
+							<div class="buttons square__buttons">
+								<button
+									type="button"
+									id="perimeterBtn"
+									onclick="calculatePerimeter"
+								>
+									Get perimeter
+								</button>
+								<button type="button" id="areaBtn" onclick="calculateArea">
+									Get area
+								</button>
+							</div>
+						</form>
+						<p class="result" id="square-result"></p>
+					</div>
+				</div>
+			</section>
 		</div>
 		<script src="./app.js"></script>
 	</body>
