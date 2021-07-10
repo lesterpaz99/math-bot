@@ -24,28 +24,91 @@ const circleArea = (radio) => {
 };
 
 // INTERACTION WITH HTML
-const calculatePerimeter = () => {
-	let input = document.getElementById('inputSquare');
-	let value = input.value;
+// --------------------------
+
+// SQUARE
+const squareInput = document.getElementById('inputSquare');
+const squareResult = document.getElementById('square-result');
+
+const calculateSquarePerimeter = () => {
+	const value = squareInput.value;
+	const unit = document.getElementById('square-unit').value;
 
 	const perimeter = squarePerimeter(value);
-	let result = document.getElementById('square-result');
-	let unit = document.getElementById('unit').value;
-	result.innerText = `Perimeter: ${perimeter}${unit}`;
+	squareResult.innerText = `Perimeter: ${perimeter}${unit}`;
 };
 
-const calculateArea = () => {
-	let input = document.getElementById('inputSquare');
-	let value = input.value;
+const squarePerimeterBtn = document.getElementById('squarePerimeterBtn');
+squarePerimeterBtn.addEventListener('click', calculateSquarePerimeter);
+
+const calculateSquareArea = () => {
+	const value = squareInput.value;
+	const unit = document.getElementById('square-unit').value;
 
 	const area = squareArea(value);
-	let result = document.getElementById('square-result');
-	let unit = document.getElementById('unit').value;
-	result.innerText = `Area: ${area}${unit}²`;
+	squareResult.innerText = `Area: ${area}${unit}²`;
 };
 
-let perimeterBtnBtn = document.getElementById('perimeterBtn');
-perimeterBtn.addEventListener('click', calculatePerimeter);
+const squareAreaBtn = document.getElementById('squareAreaBtn');
+squareAreaBtn.addEventListener('click', calculateSquareArea);
 
-let areaBtn = document.getElementById('areaBtn');
-areaBtn.addEventListener('click', calculateArea);
+// TRIANGLE
+const triangleBase = document.getElementById('base');
+const triangleResult = document.getElementById('triangle-result');
+
+const calculateTrianglePerimeter = () => {
+	const sideA = document.getElementById('sideA');
+	const sideB = document.getElementById('sideB');
+	const valueA = sideA.value;
+	const valueB = sideB.value;
+	const valueBase = triangleBase.value;
+	const unit = document.getElementById('triangle-unit').value;
+
+	const perimeter = trianglePerimeter(valueA, valueB, valueBase);
+	triangleResult.innerText = `Perimeter: ${perimeter}${unit}`;
+};
+
+const trianglePerimeterBtn = document.getElementById('trianglePerimeterBtn');
+trianglePerimeterBtn.addEventListener('click', calculateTrianglePerimeter);
+
+const calculateTriangleArea = () => {
+	const height = document.getElementById('height');
+	const valueHeight = height.value;
+	const valueBase = triangleBase.value;
+	const unit = document.getElementById('triangle-unit').value;
+
+	const area = triangleArea(valueBase, valueHeight);
+	triangleResult.innerText = `Area: ${area}${unit}²`;
+};
+
+const triangleAreaBtn = document.getElementById('triangleAreaBtn');
+triangleAreaBtn.addEventListener('click', calculateTriangleArea);
+
+// CIRCLE
+
+// 1. PERIMETER
+const circleRadio = document.getElementById('inputCircle');
+const circleResult = document.getElementById('circle-result');
+
+const calculateCirclePerimeter = () => {
+	const radio = circleRadio.value;
+	const unit = document.getElementById('circle-unit').value;
+
+	const perimeter = circlePerimeter(radio);
+	circleResult.innerText = `Perimeter: ${perimeter}${unit}`;
+};
+
+const circlePerimeterBtn = document.getElementById('circlePerimeterBtn');
+circlePerimeterBtn.addEventListener('click', calculateCirclePerimeter);
+
+// 2. AREA
+const calculateCircleArea = () => {
+	const radio = circleRadio.value;
+	const unit = document.getElementById('circle-unit').value;
+
+	const area = circleArea(radio);
+	circleResult.innerText = `Area: ${area}${unit}²`;
+};
+
+const circleAreaBtn = document.getElementById('circleAreaBtn');
+circleAreaBtn.addEventListener('click', calculateCircleArea);

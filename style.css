@@ -19,14 +19,15 @@ li {
 
 :root {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 
 	/* COLORS */
 	--primary-color: #00f2b5;
 	--main-font-color: rgba(0, 0, 0, 0.9);
 	--font-color2: white;
-	--secondary-color: #e4d7ff;
+	--secondary-color: rgb(189, 175, 218);
 	--font-color3: #9792a3;
-	--third-color: #fedfaf;
+	--third-color: #ffc771;
 	--font-color4: #f0935d;
 
 	/* FONTS */
@@ -89,6 +90,22 @@ body {
 	block-size: 4rem;
 	position: relative;
 	inset-block-end: 6px;
+	animation: robot 4s ease-in-out 3s infinite;
+}
+
+@keyframes robot {
+	0% {
+		transform: translateY(-5px);
+	}
+	25% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(2px);
+	}
+	100% {
+		transform: translateY(-5px);
+	}
 }
 
 .nav__question {
@@ -115,6 +132,14 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.cards-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1 1 290px;
+	gap: 2rem;
+	justify-content: center;
 }
 
 .section__title {
@@ -144,9 +169,6 @@ body {
 }
 
 .inputs {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	gap: 1rem;
 	margin-block-end: 1rem;
 }
 
@@ -184,9 +206,8 @@ body {
 	font-weight: 600;
 }
 
-.card button:focus {
-	outline: 2px solid var(--primary-color);
-	outline-style: auto;
+.card button:hover {
+	cursor: pointer;
 }
 
 .card button:active {
@@ -215,6 +236,12 @@ body {
 	background-color: var(--primary-color);
 }
 
+.square__inputs {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 1rem;
+}
+
 .square select {
 	inline-size: 6rem;
 }
@@ -222,4 +249,62 @@ body {
 .square button {
 	background-color: var(--font-color2);
 	color: var(--primary-color);
+}
+
+.square button:focus {
+	outline: 2px solid var(--primary-color);
+	outline-style: auto;
+}
+
+.triangle {
+	background-color: var(--secondary-color);
+}
+
+.triangle__inputs {
+	display: flex;
+	flex-direction: column;
+	margin-block-start: 1rem;
+	gap: 1rem;
+}
+
+.triangle__inputs input {
+	display: block;
+	inline-size: 100%;
+	background: transparent;
+	margin: 0;
+	position: absolute;
+	inset: 0;
+}
+
+.triangle__inputs input:focus {
+	outline: none;
+}
+
+.triangle__inputs fieldset:hover {
+	border: 2px solid white;
+}
+
+.triangle__inputs fieldset {
+	border: 1px solid white;
+	background-color: rgba(255 255 255 / 20%);
+	border-radius: 12.5px;
+	min-block-size: 6rem;
+	position: relative;
+}
+
+.triangle__inputs fieldset legend {
+	padding: 0.5rem;
+}
+
+.triangle button:focus {
+	outline: 2px solid var(--secondary-color);
+	outline-style: auto;
+}
+
+.triangle__buttons button {
+	color: var(--font-color3);
+}
+
+.circle {
+	background-color: var(--third-color);
 }
