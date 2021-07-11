@@ -10,6 +10,11 @@ import {
 	calculateCircleArea,
 } from './modules/shapes.mjs';
 
+/*
+  DISCOUNT
+*/
+import { applyDiscount } from './modules/discounts.mjs';
+
 // INTERACTION WITH HTML
 
 //SQUARE
@@ -32,3 +37,5 @@ circlePerimeterBtn.addEventListener('click', calculateCirclePerimeter);
 
 const circleAreaBtn = document.getElementById('circleAreaBtn');
 circleAreaBtn.addEventListener('click', calculateCircleArea);
+
+console.log(applyDiscount(100, 30));
