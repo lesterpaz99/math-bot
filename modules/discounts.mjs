@@ -1,5 +1,5 @@
-export const applyDiscount = (originalPrice, discount) => {
-	const appliedDiscount = originalPrice * (discount / 100);
+export const applyDiscount = (startingPrice, discount) => {
+	const appliedDiscount = startingPrice * (discount / 100);
 
-	return originalPrice - appliedDiscount;
+	return startingPrice - appliedDiscount;
 };

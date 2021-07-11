@@ -15,7 +15,7 @@ import {
 */
 import { applyDiscount } from './modules/discounts.mjs';
 
-// INTERACTION WITH HTML
+// INTERACTION WITH HTML FOR SHAPES
 
 //SQUARE
 const squarePerimeterBtn = document.getElementById('squarePerimeterBtn');
@@ -38,4 +38,18 @@ circlePerimeterBtn.addEventListener('click', calculateCirclePerimeter);
 const circleAreaBtn = document.getElementById('circleAreaBtn');
 circleAreaBtn.addEventListener('click', calculateCircleArea);
 
-console.log(applyDiscount(100, 30));
+// INTERACTION WITH HTML FOR DISCOUNT
+const startingPrice = document.getElementById('startingPrice');
+const discount = document.getElementById('discount');
+
+const getFinalPrice = () => {
+	const priceResult = document.getElementById('priceResult');
+	const startingPriceValue = startingPrice.value;
+	const discountValue = discount.value;
+
+	let finalPrice = applyDiscount(startingPriceValue, discountValue);
+	priceResult.innerHTML = finalPrice;
+};
+
+startingPrice.addEventListener('keyup', getFinalPrice);
+discount.addEventListener('keyup', getFinalPrice);
