@@ -8,12 +8,13 @@ import {
 	calculateTriangleArea,
 	calculateCirclePerimeter,
 	calculateCircleArea,
-} from './modules/shapes.mjs';
+} from './modules/geometry.mjs';
 
 /*
   DISCOUNT
 */
 import { applyDiscount } from './modules/discounts.mjs';
+import { getAverage } from './modules/statistics.mjs';
 
 // INTERACTION WITH HTML FOR SHAPES
 
