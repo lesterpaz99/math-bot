@@ -16,6 +16,14 @@ a {
 li {
 	list-style: none;
 }
+section {
+	margin-block-end: 2rem;
+}
+
+input:focus {
+	outline: 2px solid var(--font-color2);
+	outline-style: auto;
+}
 
 :root {
 	font-size: 62.5%;
@@ -46,11 +54,10 @@ body {
 }
 
 .header {
-	block-size: 5rem;
+	block-size: auto;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	padding: 1rem;
 	border-radius: 8px;
 	border-block-end: 1px solid rgba(0, 0, 0, 0.1);
 	margin-block-end: 5rem;
@@ -307,4 +314,104 @@ body {
 
 .circle {
 	background-color: var(--third-color);
+}
+
+.circle__buttons button {
+	color: var(--font-color4);
+}
+
+.discounts-section {
+	max-block-size: 100vh;
+}
+
+.discount__container {
+	position: relative;
+	background-color: var(--primary-color);
+	display: grid;
+	place-items: center;
+	margin-block-start: 8rem;
+	padding-block-end: 2rem;
+}
+
+.waves {
+	position: absolute;
+	inset-block-start: -12%;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+	block-size: 100%;
+	inline-size: 100%;
+	background-image: url(./assets/wave.svg);
+	background-position: top;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+
+.discount-card {
+	block-size: 90vh;
+	inline-size: 30rem;
+	box-shadow: 0 0 32px 2px rgb(0 0 0 / 50%);
+	border-radius: 4px;
+}
+
+.discount-card form {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: space-between;
+	block-size: 100%;
+}
+
+.discount-card form input {
+	border: none;
+	background-color: rgba(0 0 0 / 4%);
+	text-align: center;
+	color: rgba(0 0 0 / 80%);
+	font-size: 6rem;
+	letter-spacing: 0.5px;
+	word-spacing: 1px;
+	line-height: 2.2rem;
+	inline-size: 50%;
+}
+
+.discount-card form input ~ span {
+	font-size: 6rem;
+}
+
+.discount__input:first-of-type {
+	box-shadow: 0 2px 1.2rem 0 rgb(0 0 0 / 50%);
+	border-radius: 2px;
+	z-index: 1;
+}
+
+.discount__input {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	background-color: whitesmoke;
+	color: var(--primary-color);
+	block-size: 100%;
+}
+
+.discount__input > div {
+	text-align: center;
+}
+
+.discount__input--final-price {
+	background-color: var(--primary-color);
+	color: whitesmoke;
+}
+
+.discount__input label,
+.discount__input--final-price p {
+	letter-spacing: 1.5px;
+	word-spacing: 2px;
+	line-height: 1rem;
+	font-weight: 600;
+	font-size: 1.4rem;
+}
+
+.discount__result {
+	font-size: 6rem;
 }

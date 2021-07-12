@@ -52,4 +52,6 @@ const getFinalPrice = () => {
 };
 
 startingPrice.addEventListener('keyup', getFinalPrice);
+startingPrice.addEventListener('change', getFinalPrice);
 discount.addEventListener('keyup', getFinalPrice);
+discount.addEventListener('change', getFinalPrice);
