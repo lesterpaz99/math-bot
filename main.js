@@ -14,7 +14,7 @@ import {
   DISCOUNT
 */
 import { applyDiscount } from './modules/discounts.mjs';
-import { getAverage } from './modules/statistics.mjs';
+import { getAverage, getMedian } from './modules/statistics.mjs';
 
 // INTERACTION WITH HTML FOR SHAPES
 
@@ -56,3 +56,5 @@ startingPrice.addEventListener('keyup', getFinalPrice);
 startingPrice.addEventListener('change', getFinalPrice);
 discount.addEventListener('keyup', getFinalPrice);
 discount.addEventListener('change', getFinalPrice);
+
+console.log(getMedian([10, 80, 40, 1000, 100, 800]));
