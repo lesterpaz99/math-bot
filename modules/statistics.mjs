@@ -25,4 +25,31 @@ const getMedian = (list) => {
 	}
 };
 
-export { getAverage, getMedian };
+// MODE
+
+const getMode = (list) => {
+	let repeatedValues = {};
+	let mode = [];
+
+	list.map((element) => {
+		if (repeatedValues[element]) {
+			repeatedValues[element] += 1;
+		} else {
+			repeatedValues[element] = 1;
+		}
+	});
+
+	const modeValues = Object.values(repeatedValues);
+	repeatedValues = Object.entries(repeatedValues); // PARSE FROM OBJ TO ARRAY
+
+	const mostPopular = Math.max(...modeValues);
+	for (let i in repeatedValues) {
+		if (repeatedValues[i][1] === mostPopular) {
+			mode.push(repeatedValues[i][0]);
+		}
+	}
+
+	return mode;
+};
+
+export { getAverage, getMedian, getMode };
