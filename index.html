@@ -181,6 +181,42 @@
 				</div>
 			</div>
 		</section>
+		<section class="statistics" id="statistics">
+			<h2 class="section__title">Statistics</h2>
+			<p>
+				Statistics help up to study variability, collection and analysis of
+				data.
+			</p>
+			<p>Use the <span>mean</span> when your data doesn't vary too much</p>
+			<p>Use the <span>median</span> when your data varies too much</p>
+			<p>Use the <span>mode</span> when you want to know the popular element</p>
+			<div class="waves"></div>
+			<div class="statistics-card">
+				<form>
+					<label for="statistics-data"
+						>Which is your data?<small>(Separated by hyphens)</small></label
+					>
+					<input
+						type="text"
+						class="statistics__input"
+						id="statistics-data"
+						pattern="^[0-9]*(-[0-9]*?)*\S"
+						placeholder="Example: 136-70-43"
+					/>
+					<button type="submit" class="statistic__button" id="mean-btn">
+						Get mean
+					</button>
+					<button type="submit" class="statistic__button" id="median-btn">
+						Get median
+					</button>
+					<button type="submit" class="statistic__button" id="mode-btn">
+						Get mode
+					</button>
+				</form>
+				<p class="result-chosen" id="result-chosen"></p>
+				<p class="statistics__result" id="statistics-result"></p>
+			</div>
+		</section>
 		<script type="module" src="./main.js"></script>
 	</body>
 </html>
