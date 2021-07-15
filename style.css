@@ -415,3 +415,93 @@ body {
 .discount__result {
 	font-size: 6rem;
 }
+
+.statistics {
+	position: relative;
+	margin-block-start: 10rem;
+	background-color: #4361ee;
+	border-top-right-radius: 6rem;
+	padding: 1rem;
+	color: whitesmoke;
+}
+
+.statistics-content {
+	margin-block-start: 2rem;
+	background-color: white;
+}
+
+.statistics-text {
+	margin-block-end: 1rem;
+}
+
+.statistics-text span {
+	font-weight: 600;
+}
+
+.statistics-card {
+	background-color: whitesmoke;
+	padding: 1rem;
+	border-radius: 8px;
+	border: 2px solid var(--main-font-color);
+	color: var(--main-font-color);
+	font-weight: 600;
+	box-shadow: 4px 4px 0 2px var(--main-font-color);
+}
+
+.form__small-txt {
+	display: block;
+	margin-block-end: 2rem;
+}
+
+.statistics__input {
+	padding: 1rem;
+	background: transparent;
+	border: 2px solid var(--main-font-color);
+	border-radius: 1rem;
+	inline-size: 100%;
+	margin-block-end: 1rem;
+	color: var(--main-font-color);
+	font-weight: 600;
+	font-size: 1.8rem;
+}
+
+.statistics__input:focus {
+	outline: none;
+}
+
+.statistics__input::placeholder {
+	color: gray;
+	font-size: 1.4rem;
+}
+
+.statistics-buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-block-end: 2rem;
+}
+
+.statistic__button {
+	background-color: white;
+	color: var(--main-font-color);
+	font-weight: 600;
+	padding: 1rem;
+	outline: none;
+	border: 2px solid var(--main-font-color);
+	border-radius: 2rem;
+	box-shadow: 0px 4px 10px 0 rgb(0 0 0 / 40%), 6px 4px 0px 0px #4361ee;
+}
+
+.result-chosen,
+.statistics__result {
+	text-align: center;
+}
+
+.result-wrapper {
+	padding: 1rem;
+	block-size: 6rem;
+}
+
+.statistics__result {
+	font-size: 2.4rem;
+}
