@@ -2,7 +2,7 @@
 
 const getAverage = (list) => {
 	const total = list.reduce((a, b) => a + b);
-	return total / list.length;
+	return Number((total / list.length).toFixed(2));
 };
 
 // MEDIAN
