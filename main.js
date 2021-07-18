@@ -98,3 +98,22 @@ const callToAction = (ev, tool) => {
 meanBtn.addEventListener('click', (e) => callToAction(e, 'Mean'));
 medianBtn.addEventListener('click', (e) => callToAction(e, 'Median'));
 modeBtn.addEventListener('click', (e) => callToAction(e, 'Mode'));
+
+// SAVE THE CITY IN THE LOCAL STORAGE
+const costLivingBtn = document.getElementById('cost-living__btn');
+
+costLivingBtn.addEventListener('click', () => {
+	const city = document.getElementById('city').value;
+	const incomes = document.getElementById('income').value;
+
+	const isFull = (input) => input === null || input === '';
+
+	if (isFull(city) && isFull(incomes)) {
+		localStorage.setItem('city', city);
+		localStorage.setItem('incomes', incomes);
+	} else {
+		localStorage.clear();
+		localStorage.setItem('city', city);
+		localStorage.setItem('incomes', incomes);
+	}
+});
