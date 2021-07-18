@@ -1,0 +1,135 @@
+/* RESET STYLES */
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+img {
+	max-inline-size: 100%;
+	block-size: auto;
+}
+a {
+	text-decoration: none;
+	color: initial;
+}
+li {
+	list-style: none;
+}
+section {
+	margin-block-end: 2rem;
+}
+
+input:focus {
+	outline: 2px solid var(--font-color2);
+	outline-style: auto;
+}
+
+:root {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+
+	/* COLORS */
+	--primary-color: #00f2b5;
+	--main-font-color: rgba(0, 0, 0, 0.9);
+	--font-color2: white;
+	--secondary-color: rgb(189, 175, 218);
+	--font-color3: #9792a3;
+	--third-color: #ffc771;
+	--font-color4: #f0935d;
+
+	/* FONTS */
+	--main-font: 'Inter', sans-serif;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: var(--main-font);
+	color: var(--main-font-color);
+	font-weight: 300;
+}
+
+.wrapper {
+	padding: 1rem;
+}
+
+.header {
+	height: 33rem;
+}
+
+.header img {
+	transform: translateY(-35px);
+}
+
+.title-city {
+	transform: translateY(-80px);
+}
+
+.nav ul {
+	display: flex;
+	white-space: nowrap;
+	overflow-x: scroll;
+	height: 4rem;
+	margin: 1rem 0;
+	padding: 1rem;
+}
+
+.nav ul li {
+	margin: 0 0.5rem;
+}
+
+.nav ul li a {
+	padding: 1rem;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+	border-radius: 4px;
+}
+
+main {
+	background-color: rgba(30, 30, 30, 0.1);
+	border-radius: 4px;
+}
+
+.homepage-btn {
+	background-color: var(--font-color4);
+	border: none;
+	border-radius: 8px;
+	padding: 1.2rem 2.4rem;
+	position: fixed;
+	inset-block-end: 2rem;
+	inset-inline-start: 50%;
+	transform: translateX(-50%);
+}
+
+.card {
+	background-color: white;
+	margin: 1rem;
+	padding: 1rem;
+	box-shadow: 0 0 7px rgb(0 0 0 / 15%);
+	border-radius: 5px;
+}
+
+.title__container {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+.data__table {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+}
+
+.service-name {
+	font-size: 1.4rem;
+	padding: 0.5rem 0;
+}
+
+.service-price {
+	color: limegreen;
+	text-align: end;
+}
+
+.card:last-of-type {
+	margin-block-end: 8rem;
+}
