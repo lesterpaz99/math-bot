@@ -227,18 +227,31 @@
 		</section>
 		<section class="cost-living" id="analysis">
 			<h2 class="section__title">Cost of living <span>Calculator</span></h2>
-			<img src="./assets/sweet_home.svg" alt="House and tress" />
-			<form>
-				<label for="city">City</label>
-				<input
-					type="text"
-					class="city__input"
-					id="city"
-					value="San Pedro Sula, HND"
-					disabled
-				/>
-				<label for="income">Your current income</label>
-				<input type="number" class="income__input" id="income" />
+			<img
+				src="./assets/sweet_home.svg"
+				class="cost-living__img"
+				alt="House and tress"
+			/>
+			<form class="form">
+				<div>
+					<label for="city">City</label>
+					<input
+						type="text"
+						class="city__input"
+						id="city"
+						value="San Pedro Sula, HND"
+						disabled
+					/>
+				</div>
+				<div>
+					<label for="income">Your current income</label>
+					<input
+						type="number"
+						class="income__input"
+						id="income"
+						placeholder="$"
+					/>
+				</div>
 				<button type="button" class="cost-living__btn" id="cost-living__btn">
 					<a href="./pages/cost_living.html">Calculate</a>
 				</button>
