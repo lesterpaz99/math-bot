@@ -7,6 +7,8 @@ import {
 	entertaining,
 } from '../modules/analysis/cost_living.mjs';
 
+import { getAverage, getMedian, getMode } from '../modules/statistics.mjs';
+
 // GLOBAL VARIABLES
 const main = document.getElementById('main');
 const city = localStorage.getItem('city');
@@ -69,3 +71,44 @@ createCard('entertaining-card', 'entertaining', entertaining);
 
 const homePageBtn = document.getElementById('homepage-btn');
 console.log(`Ciudad: ${city}`);
+
+const getAverageExpenses = (service) => {
+	const prices = service.map((item) => {
+		return item.price;
+	});
+
+	if (service === transportation) {
+		return getMedian(prices);
+	}
+	return getAverage(prices);
+};
+
+const totalExpenses = (service) => {
+	const prices = service.map((item) => {
+		return item.price;
+	});
+
+	return prices.reduce((a, b) => a + b);
+};
+
+const totals = [];
+totals.push(totalExpenses(food));
+totals.push(getAverageExpenses(housing));
+totals.push(totalExpenses(clothing));
+totals.push(getAverageExpenses(transportation));
+totals.push(totalExpenses(personalCare));
+totals.push(totalExpenses(entertaining));
+
+const costOfLiving = totals.reduce((a, b) => a + b);
+console.log(costOfLiving);
+
+const totalUserIncomes = Number(userIncomes.innerText);
+const incomesLeft = Number((totalUserIncomes - costOfLiving).toFixed(2));
+console.log(incomesLeft);
+
+const savingCapacity1 = incomesLeft * 0.3;
+const savingCapacity2 = incomesLeft * 0.4;
+
+console.log(
+	`Your savings capacity is between $${savingCapacity1} and $${savingCapacity2} approximately `
+);
