@@ -63,6 +63,13 @@ body {
 
 .title-city {
 	transform: translateY(-80px);
+	color: var(--font-color4);
+}
+
+.current-income {
+	font-weight: 600;
+	font-size: 2.4rem;
+	margin-block-end: 2rem;
 }
 
 .nav ul {

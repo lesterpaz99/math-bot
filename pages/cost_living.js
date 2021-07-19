@@ -16,7 +16,8 @@ const titleCity = document.getElementById('title-city');
 titleCity.innerText = city;
 
 // GET THE USER INCOME FROM THE MAIN PAGE
-/// ...
+const userIncomes = document.getElementById('current-income');
+userIncomes.innerText = localStorage.getItem('incomes');
 
 // CREATE THE CARD
 
