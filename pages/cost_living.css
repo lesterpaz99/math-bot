@@ -53,11 +53,11 @@ body {
 	padding: 1rem;
 }
 
-.header {
-	height: 33rem;
+.main {
+	block-size: 45.2rem;
 }
 
-.header img {
+.main img {
 	transform: translateY(-35px);
 }
 
@@ -66,10 +66,27 @@ body {
 	color: var(--font-color4);
 }
 
+.description {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	transform: translateY(-55px);
+	font-size: 1.4rem;
+}
+
+.description > div {
+	display: flex;
+	gap: 2rem;
+}
+
 .current-income {
 	font-weight: 600;
 	font-size: 2.4rem;
 	margin-block-end: 2rem;
+}
+
+.savings-capacity-descp {
+	color: rgb(100, 98, 98);
 }
 
 .nav ul {
@@ -91,8 +108,8 @@ body {
 	border-radius: 4px;
 }
 
-main {
-	background-color: rgba(30, 30, 30, 0.1);
+.information {
+	background-color: rgb(140 138 138 / 12%);
 	border-radius: 4px;
 }
 

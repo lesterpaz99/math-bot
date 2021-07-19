@@ -9,14 +9,25 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<header class="header">
+			<main class="main">
 				<img src="../assets/city_ilustration.svg" alt="City Illustration" />
 				<h1 class="title-city" id="title-city">San Pedro Sula, HND</h1>
-			</header>
-			<p>
-				Your current Income: <span class="current-income">$</span
-				><span class="current-income" id="current-income"></span>
-			</p>
+				<div class="description">
+					<div>
+						<p>
+							Your current income <br />
+							<span class="current-income">$</span
+							><span class="current-income" id="current-income"></span>
+						</p>
+						<p>
+							Cost of living in this city <small>(1 person)</small> <br />
+							<span class="current-income">$</span
+							><span class="current-income" id="cost-of-living"></span>
+						</p>
+					</div>
+					<p class="savings-capacity-descp" id="savings-capacity"></p>
+				</div>
+			</main>
 			<nav class="nav">
 				<ul>
 					<li><a href="#housing-card">housing</a></li>
@@ -28,9 +39,9 @@
 				</ul>
 			</nav>
 		</div>
-		<main>
-			<div class="wrapper" id="main"></div>
-		</main>
+		<section class="information">
+			<div class="wrapper" id="information"></div>
+		</section>
 		<button type="button" class="homepage-btn" id="homepage-btn">
 			<a href="../index.html#analysis">Go to homepage</a>
 		</button>

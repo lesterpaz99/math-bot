@@ -10,7 +10,7 @@ import {
 import { getAverage, getMedian, getMode } from '../modules/statistics.mjs';
 
 // GLOBAL VARIABLES
-const main = document.getElementById('main');
+const information = document.getElementById('information');
 const city = localStorage.getItem('city');
 
 // GET THE MAIN TITLE OF THE PAGE
@@ -59,7 +59,7 @@ const createCard = (idCard, cardTitleText, services) => {
 		dataTable.appendChild(serviceOrProductName);
 		dataTable.appendChild(serviceOrProductPrice);
 	}
-	main.appendChild(card);
+	information.appendChild(card);
 };
 
 createCard('housing-card', 'housing', housing);
@@ -102,13 +102,15 @@ totals.push(totalExpenses(entertaining));
 const costOfLiving = totals.reduce((a, b) => a + b);
 console.log(costOfLiving);
 
+const costOfLivingText = document.getElementById('cost-of-living');
+costOfLivingText.innerText = costOfLiving;
+
 const totalUserIncomes = Number(userIncomes.innerText);
 const incomesLeft = Number((totalUserIncomes - costOfLiving).toFixed(2));
 console.log(incomesLeft);
 
-const savingCapacity1 = incomesLeft * 0.3;
-const savingCapacity2 = incomesLeft * 0.4;
+const savingCapacity1 = (incomesLeft * 0.3).toFixed(2);
+const savingCapacity2 = (incomesLeft * 0.4).toFixed(2);
 
-console.log(
-	`Your savings capacity is between $${savingCapacity1} and $${savingCapacity2} approximately `
-);
+const savingCapacityText = document.getElementById('savings-capacity');
+savingCapacityText.innerText = `Your savings capacity is between $${savingCapacity1} and $${savingCapacity2} approximately.`;
