@@ -161,6 +161,7 @@ body {
 	font-size: 1.5rem;
 	color: var(--font-color2);
 	text-shadow: 0 0 30px black;
+	max-inline-size: 300px;
 }
 
 .card__title {
@@ -170,7 +171,7 @@ body {
 }
 
 .card__title img {
-	width: 3rem;
+	inline-size: 3rem;
 	margin: 0.5rem;
 	vertical-align: middle;
 }
@@ -440,6 +441,8 @@ body {
 
 .statistics-card {
 	background-color: whitesmoke;
+	max-inline-size: 375px;
+	margin: 0 auto;
 	padding: 1rem;
 	border-radius: 8px;
 	border: 2px solid var(--main-font-color);
@@ -549,4 +552,133 @@ body {
 	border-radius: 8px;
 	padding: 1.2rem 2.4rem;
 	font-weight: 600;
+}
+
+@media screen and (min-width: 425px) {
+	body {
+		font-size: 1.7rem;
+	}
+	.waves {
+		inset-block-start: -18%;
+	}
+	.cost-living__img {
+		max-inline-size: 42rem;
+	}
+	.cost-living__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.cost-living {
+		block-size: auto;
+	}
+}
+
+@media screen and (min-width: 715px) {
+	.main-section {
+		font-size: 2.2rem;
+	}
+	.greetings__container {
+		margin-inline-start: 2rem;
+	}
+	.nav__question {
+		font-size: 1.6rem;
+	}
+	.section__title {
+		margin: 4rem;
+	}
+	.cards-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		place-items: center;
+	}
+	.triangle {
+		grid-column: 2 / span 1;
+		grid-row: 1 / span 2;
+	}
+	.waves {
+		inset-block-start: -26%;
+	}
+	.statistics > h2 {
+		margin-block-end: 1rem;
+	}
+	.statistics-text {
+		margin-inline-start: 3rem;
+	}
+	.statistics-card {
+		margin-block-start: 2rem;
+	}
+	.cost-living__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.form {
+		transform: none;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.greetings__container {
+		font-size: 3.2rem;
+		line-height: 4.2rem;
+	}
+	.nav__question {
+		font-size: 1.8rem;
+	}
+	.section__title {
+		font-size: 3.6rem;
+	}
+	.cards-container {
+		padding: 0 2rem;
+	}
+	.card {
+		min-width: 100%;
+		font-size: 1.7rem;
+	}
+	.card__title img {
+		inline-size: 5rem;
+	}
+	.square__inputs {
+		grid-template-columns: 3fr 1fr;
+	}
+	.card input,
+	.card select {
+		block-size: 4rem;
+		font-size: 1.6rem;
+	}
+	.card button {
+		font-size: 1.6rem;
+	}
+	.discount__input label,
+	.discount__input--final-price p {
+		font-size: 1.6rem;
+	}
+	.discount-card form input,
+	.discount-card form input ~ span {
+		font-size: 7rem;
+	}
+	.waves {
+		inset-block-start: -38%;
+	}
+	.statistics__content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: translateY(-54px);
+	}
+	.cost-living__img {
+		max-inline-size: 55rem;
+	}
+	.form label {
+		font-size: 1.6rem;
+	}
+	.form input {
+		font-size: 2rem;
+	}
+	.cost-living__btn {
+		font-size: 1.8rem;
+		margin-block-start: 2rem;
+	}
 }

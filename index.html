@@ -184,78 +184,85 @@
 		<section class="statistics" id="statistics">
 			<h2 class="section__title">Statistics</h2>
 			<div class="wrapper">
-				<p class="statistics-text">
-					Use the <span>mean</span> when your data doesn't vary too much.
-				</p>
-				<p class="statistics-text">
-					Use the <span>median</span> when your data varies too much.
-				</p>
-				<p class="statistics-text">
-					Use the <span>mode</span> when you want to know the popular element.
-				</p>
-				<div class="statistics-card">
-					<form class="statistics-form">
-						<label class="form__label" for="statistics-data"
-							>Which is your data?</label
-						>
-						<small class="form__small-txt">(Separated by hyphens)</small>
-						<input
-							type="text"
-							class="statistics__input"
-							id="statistics-data"
-							pattern="^[0-9]*(-[0-9]*?)*\S"
-							placeholder="Example: 136-70-43"
-						/>
-						<div class="statistics-buttons">
-							<button type="submit" class="statistic__button" id="mean-btn">
-								Get mean
-							</button>
-							<button type="submit" class="statistic__button" id="median-btn">
-								Get median
-							</button>
-							<button type="submit" class="statistic__button" id="mode-btn">
-								Get mode
-							</button>
+				<div class="statistics__content">
+					<div>
+						<p class="statistics-text">
+							Use the <span>mean</span> when your data doesn't vary too much.
+						</p>
+						<p class="statistics-text">
+							Use the <span>median</span> when your data varies too much.
+						</p>
+						<p class="statistics-text">
+							Use the <span>mode</span> when you want to know the popular
+							element.
+						</p>
+					</div>
+					<div class="statistics-card">
+						<form class="statistics-form">
+							<label class="form__label" for="statistics-data"
+								>Which is your data?</label
+							>
+							<small class="form__small-txt">(Separated by hyphens)</small>
+							<input
+								type="text"
+								class="statistics__input"
+								id="statistics-data"
+								pattern="^[0-9]*(-[0-9]*?)*\S"
+								placeholder="Example: 136-70-43"
+							/>
+							<div class="statistics-buttons">
+								<button type="submit" class="statistic__button" id="mean-btn">
+									Get mean
+								</button>
+								<button type="submit" class="statistic__button" id="median-btn">
+									Get median
+								</button>
+								<button type="submit" class="statistic__button" id="mode-btn">
+									Get mode
+								</button>
+							</div>
+						</form>
+						<div class="result-wrapper">
+							<p class="result-chosen" id="result-chosen"></p>
+							<p class="statistics__result" id="statistics-result"></p>
 						</div>
-					</form>
-					<div class="result-wrapper">
-						<p class="result-chosen" id="result-chosen"></p>
-						<p class="statistics__result" id="statistics-result"></p>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="cost-living" id="analysis">
 			<h2 class="section__title">Cost of living <span>Calculator</span></h2>
-			<img
-				src="./assets/sweet_home.svg"
-				class="cost-living__img"
-				alt="House and tress"
-			/>
-			<form class="form">
-				<div>
-					<label for="city">City</label>
-					<input
-						type="text"
-						class="city__input"
-						id="city"
-						value="San Pedro Sula, HND"
-						disabled
-					/>
-				</div>
-				<div>
-					<label for="income">Your current income</label>
-					<input
-						type="number"
-						class="income__input"
-						id="income"
-						placeholder="$"
-					/>
-				</div>
-				<button type="button" class="cost-living__btn" id="cost-living__btn">
-					<a href="./pages/cost_living.html">Calculate</a>
-				</button>
-			</form>
+			<div class="cost-living__container">
+				<img
+					src="./assets/sweet_home.svg"
+					class="cost-living__img"
+					alt="House and tress"
+				/>
+				<form class="form">
+					<div>
+						<label for="city">City</label>
+						<input
+							type="text"
+							class="city__input"
+							id="city"
+							value="San Pedro Sula, HND"
+							disabled
+						/>
+					</div>
+					<div>
+						<label for="income">Your current income</label>
+						<input
+							type="number"
+							class="income__input"
+							id="income"
+							placeholder="$"
+						/>
+					</div>
+					<button type="button" class="cost-living__btn" id="cost-living__btn">
+						<a href="./pages/cost_living.html">Calculate</a>
+					</button>
+				</form>
+			</div>
 		</section>
 		<script type="module" src="./main.js"></script>
 	</body>
