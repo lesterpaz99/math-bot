@@ -53,16 +53,18 @@ body {
 	padding: 1rem;
 }
 
-.main {
-	block-size: 45.2rem;
+.description-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.main img {
+.main__img {
 	transform: translateY(-35px);
+	inline-size: 42rem;
 }
 
 .title-city {
-	transform: translateY(-80px);
 	color: var(--font-color4);
 }
 
@@ -74,9 +76,10 @@ body {
 	font-size: 1.4rem;
 }
 
-.description > div {
-	display: flex;
-	gap: 2rem;
+.description p {
+	border-left: 4px solid var(--font-color4);
+	border-radius: 4px;
+	padding-left: 1rem;
 }
 
 .current-income {
@@ -86,7 +89,7 @@ body {
 }
 
 .savings-capacity-descp {
-	color: rgb(100, 98, 98);
+	font-weight: 600;
 }
 
 .nav ul {
@@ -156,4 +159,40 @@ body {
 
 .card:last-of-type {
 	margin-block-end: 8rem;
+}
+
+@media screen and (min-width: 768px) {
+	.description-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		place-items: center;
+		gap: 2rem;
+	}
+	.description {
+		transform: none;
+	}
+	.main__img {
+		transform: translateY(4px);
+	}
+	.nav ul {
+		overflow-x: initial;
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.main__img {
+		inline-size: 55rem;
+	}
+	.description {
+		font-size: 1.8rem;
+	}
+	.nav ul {
+		font-size: 1.7rem;
+	}
+	.card {
+		inline-size: 80%;
+		margin: 0 auto;
+		font-size: 1.7rem;
+	}
 }
